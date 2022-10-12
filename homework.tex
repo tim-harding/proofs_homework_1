@@ -47,13 +47,17 @@ We consider the following exhaustive cases:
 Given $a, b \in \Z$ such that $a$ and $b$ are odd, $b > 0$, and $b \nmid a$, prove that there exist $s, t \in \Z$ such that $a = bs + t$, $t$ is odd, and $\abs{t} < b$.
 
 \subsection{Solution}
-
+There exist $k, q \in \Z$ such that $a = 2k + 1$ and $b = 2q + 1$. We know from the division algorithm that there exist $s, t \in \Z$ such that $a = bs + t$ with $0 \leq t < b$. By substitution, we have
+\begin{align*}
+    2k + 1 &= (2q + 1)s + t \\
+    t &= 2k + 1 - (2q + 1)s
+\end{align*}
 
 
 \section{}
 
 \subsection{Problem}
-List the integers $100!$, $100^100$, $2^100$, and $(50!)^2$ in order of increasing size with reasoning provided.
+List the integers $100!$, $100^{100}$, $2^{100}$, and $(50!)^2$ in order of increasing size with reasoning provided.
 
 \subsection{Solution}
 
@@ -65,6 +69,7 @@ List the integers $100!$, $100^100$, $2^100$, and $(50!)^2$ in order of increasi
 Find the highest power of 5 that divides $1000!$.
 
 \subsection{Solution}
+Since $1000!$ is the product of an ascending sequence of numbers and every $5^\text{th}$ term is a multiple of 5, every $5^\text{th}$ term adds a power to our divisor. Similarly, every $25^\text{th}$ term is a multiple of 5 twice, so these terms add 2 to the power of our divisor. The same applies for multiples of $125$ adding 3 to the power and multiples of $625$ adding 4 to the power. Since we have $\frac{1000}{5}$ multiples of 5, $\frac{1000}{25}$ multiples of 25, $\frac{1000}{125}$ multiples of 125, and $\floor{\frac{1000}{625}}$ multiples of 625, we find that our power should be $\frac{1000}{5} + \frac{1000}{25} + \frac{1000}{125} + \floor{\frac{1000}{625}} = 200 + 40 + 8 + 1 = 249$ and the highest power of 5 that divides $1000!$ is $\boxed{5^{249}}$.
 
 
 
