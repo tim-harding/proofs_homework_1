@@ -32,11 +32,30 @@
 Given $n \in \mathbb{Z}$, prove that $3 \mid (n^3 - n)$.
 
 \subsection{Solution}
-TODO
-We consider the following exhaustive cases:
+We know that $n$ can be written in one of three ways:
 \begin{enumerate}
-    \item If $n$ is even, then $\exists k \in \Z$ such that $n = 2k$. We then have $n^3 - n = (2k)^3 - 2k = 8k^3 - 2k = 2k(4k^2 - 1)$
-    \item If $n$ is odd, then $\exists k \in \Z$ such that $n = 2k + 1$. We then have $n^3 - n = (2k + 1)^3 - (2k + 1)$
+    \item If $n = 3a$ for some $a \in \Z$, we have \begin{align*}
+        n^3 &- n \\
+        (3a)^3 &- 3a \\
+        27a^3 &- 3a \\
+        3(9a^3 &- a)
+    \end{align*} which is divisible by 3.
+
+    \item If $n = 3a + 1$ for some $a \in \Z$, we have \begin{align*}
+        &n^3 - n \\
+        n&(n^2 - 1) \\
+        (3a + 1) &((3a + 1)^2 - 1) \\
+        (3a + 1) &(9a^2 + 6a + 1 - 1) \\
+        3 ((3a + 1)&(3a^2 + 2a))
+    \end{align*} which is divisible by 3.
+
+    \item If $n = 3a + 2$ for some $a \in \Z$, we have \begin{align*}
+        &n^3 - n \\
+        n&(n^2 - 1) \\
+        (3a + 2) &((3a + 2)^2 - 1) \\
+        (3a + 2) &(9a^2 + 12a + 4 - 1) \\
+        3 ((3a + 2) &(3a^2 + 4a + 1))
+    \end{align*} which is divisible by 3.
 \end{enumerate}
 
 
