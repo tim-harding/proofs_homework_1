@@ -68,9 +68,20 @@ Given $a, b \in \Z$ such that $a$ and $b$ are odd, $b > 0$, and $b \nmid a$, pro
 \subsection{Solution}
 There exist $k, q \in \Z$ such that $a = 2k + 1$ and $b = 2q + 1$. We know from the division algorithm that there exist $s, t \in \Z$ such that $a = bs + t$ with $0 \leq t < b$. By substitution, we have
 \begin{align*}
+    a &= bs + t \\
     2k + 1 &= (2q + 1)s + t \\
     t &= 2k + 1 - (2q + 1)s
 \end{align*}
+Consider the following exhaustive cases:
+\begin{enumerate}
+    \item Observe that if $s$ is even, then $t$ is odd and we are done.
+    \item If $s$ is odd, then $t$ is even and there exists $m \in \Z$ such that $t = 2m$. We then find $t' = t - b = 2m - (2q + 1) = 2m - 2q - 1 = 2m - 2q - 2 + 2 - 1 = 2(m - q - 1) + 1$, which is odd. Note that $-b < t' < 0$. We then substitute
+    \begin{align*}
+        a = bs + t \\
+        a = bs + t + b - b \\
+        a = b(s - 1) + t'
+    \end{align*}
+\end{enumerate}
 
 
 \section{}
